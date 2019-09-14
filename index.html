@@ -2,32 +2,80 @@
 <html>
 
 <head>
-    <title>Something</title>
+    <title>BTS-Mento</title>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="index.css" />
+    <!-- <link rel="stylesheet" href="css/index.css" /> -->
+    <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body>
-    <!-- clock -->
-    <div class="js-clock">
-        <h1>00:00</h1>
+
+    <div class="top-row">
+        <div class="region top-left"></div>
+
+        <div class="region top-center"></div>
+
+        <div class="region top-right">
+            <!-- WEATHER -->
+            <spanc class="js-weather"></spanc>
+        </div>
+
     </div>
 
-    <!-- Greeting -->
-    <form class="js-form form">
-        <input type="text" placeholder="What is your name?" />
-    </form>
-    <h4 class="js-greetings greetings"></h4>
+    <div class="region center">
+        <!-- clock -->
+        <div class = "app-container clock" style>
+        <div class = "js-clock default-clock">
+            <div class="time">00:00</div>
+            <span class="format">PM</span>
+        </div>
 
-    <!-- TODO -->
-    <form class="js-toDoForm">
-        <input type="text" placeholder="Write a to do"/>
-    </form>
-    <ul class="js-toDoList"></ul>
 
-    <script src="clock.js"></script>
-    <script src="greeting.js"></script>
-    <script src="todo.js"></script>
+        <!-- Greeting -->
+        <div id = "greeting" class="app-container has-dash-icon has-centered-3-col greeting transition" data-test="greeting" style>
+            <span class="side-col"></span>
+            <span class="center-col content">
+                <span class="message">
+                    <form class="js-form form">
+                            <input type="text" placeholder="What is your name?" />
+                        </form>
+                        <h4 class="js-greetings greetings"></h4>
+                </span>
+            </span>
+            <span class="side-col"></span>
+        </div>
+
+
+<!--         
+        <form class="js-form form">
+            <input type="text" placeholder="What is your name?" />
+        </form>
+        <h4 class="js-greetings greetings"></h4> -->
+    </div>
+
+    <div class = "region center-below"></div>
+    <div class = "region bottom"></div>
+    <div class = "region bottom-left"></div>
+    <div class = "region bottom-right">
+            <!-- TODO -->
+        <ul class="js-toDoList"></ul>
+        <form class="js-toDoForm">
+                <input type="text" placeholder="Write a to do"/>
+            </form>
+    </div>
+
+
+
+
+
+
+
+    <!-- JS -->
+    <script src="js/clock.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/bg.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 
 </html>
